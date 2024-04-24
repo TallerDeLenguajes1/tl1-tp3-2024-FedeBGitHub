@@ -11,8 +11,7 @@ int main()
     for (int i = 0; i < 5; i++)
     {
         printf("\n Ingrese un nombre: ");
-        scanf("%s", buff);
-        
+        gets(buff);
         nombres[i] = malloc((strlen(buff) + 1) * sizeof(char));
         strcpy(nombres[i], buff);
     }
