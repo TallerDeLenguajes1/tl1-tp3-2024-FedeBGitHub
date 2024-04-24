@@ -4,11 +4,15 @@
 
 int main()
 {
-
+    int cantNombres;
     char buff[100];
-    char ** nombres = malloc(5 * sizeof(char *));;
+    
+    printf("Ingrese la cantidad de nombres que desea introducir: ");
+    scanf("%d", &cantNombres);
+    fflush(stdin);
+    char ** nombres = malloc(cantNombres * sizeof(char *));
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < cantNombres; i++)
     {
         printf("\n Ingrese un nombre: ");
         gets(buff);
@@ -17,7 +21,7 @@ int main()
     }
 
 
-    for (int j = 0; j < 5; j++)
+    for (int j = 0; j <cantNombres; j++)
     {
     
         printf("\n%s", nombres[j]);
